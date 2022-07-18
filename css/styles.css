@@ -5,6 +5,7 @@
   --main-text-color: #757575;
   --main-link-color: #2196f3;
   --logo-color: white;
+  --icon-color: #afb1b8;
 }
 
 *,
@@ -90,11 +91,19 @@ nav {
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact-link-icon {
   margin-right: 10px;
-  color: var(--main-text-color);
+  fill: var(--main-text-color);
+}
+
+.contact-link-icon:hover,
+.contact-link-icon::selection {
+  fill: var(--main-link-color);
 }
 
 .menu-container .logo {
@@ -189,6 +198,17 @@ h1 {
   color: var(--main-text-color);
 }
 
+.skills-icon {
+  display: flex;
+  width: 270px;
+  height: 120px;
+  background: #f5f4fa;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
 .section-title {
   color: var(--main-normal-text-color);
   font-size: 36px;
@@ -215,7 +235,7 @@ h1 {
 }
 
 .team {
-  height: 648px;
+  max-height: 708px;
   background-color: #f5f4fa;
   line-height: 1.17;
 }
@@ -228,6 +248,40 @@ h1 {
   color: var(--main-normal-text-color);
   font-size: 36px;
   font-weight: 700;
+}
+
+.team-media {
+  list-style: none;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding-top: 16px;
+}
+
+.team-media-icon {
+  fill: var(--icon-color);
+}
+
+.team-media-icon:hover {
+  fill: var(--logo-color);
+}
+.team-media li {
+  width: 44px;
+  height: 44px;
+  padding: 12px;
+  border-radius: 50%;
+  fill: var(--icon-color);
+  margin-bottom: 30px;
+}
+
+.team-media li:hover,
+.team-media li:focus,
+.team-media li:active {
+  background-color: var(--main-link-color);
+  fill: var(--logo-color);
 }
 
 figcaption .member-name {
@@ -247,11 +301,43 @@ figcaption .member-name {
 
 .member-box {
   background-color: var(--logo-color);
-  width: 270px;
-  height: 368px;
+  max-width: 270px;
+  max-height: 428px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+}
+
+.clients .container {
+  text-align: center;
+}
+
+.clients {
+  line-height: 1.17;
+}
+
+.client-list {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  padding-top: 50px;
+}
+
+.client-list-item {
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  display: flex;
+  width: 170px;
+  height: 92px;
+  justify-content: center;
+  align-items: center;
+  fill: var(--icon-color);
+}
+
+.client-list-item:hover {
+  fill: var(--main-link-color);
+  border-color: var(--main-link-color);
+  cursor: pointer;
 }
 
 footer {
@@ -261,6 +347,7 @@ footer {
 footer .container {
   padding-top: 60px;
   padding-bottom: 60px;
+  display: flex;
 }
 
 address ul {
@@ -297,6 +384,43 @@ address ul {
   color: var(--main-link-color);
 }
 
+.footer-socialmedia {
+  padding-left: 70px;
+}
+
+.footer-header {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--logo-color);
+  margin: 0;
+}
+
+.footer-socialmedia-list {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  padding-top: 20px;
+}
+
+.footer-media-item {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  fill: var(--logo-color);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.footer-media-item:hover {
+  background: var(--main-link-color);
+  cursor: pointer;
+}
+
 address li {
   line-height: 1.71;
   list-style: none;
@@ -312,13 +436,14 @@ li button {
   font-size: 16px;
   border-radius: 4px;
   border-style: none;
-  offset: 0px, 4px, rgba(0, 0, 0, 0.15);
   padding: 6px 22px 6px 22px;
 }
 
 li button:hover {
   color: var(--logo-color);
   background-color: var(--main-link-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
   cursor: pointer;
 }
 
@@ -366,4 +491,9 @@ li button:hover {
   font-size: 16px;
   color: var(--main-text-color);
   text-align: left;
+}
+
+.item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
