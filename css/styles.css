@@ -83,6 +83,7 @@ nav {
   flex-direction: row;
   gap: 50px;
   margin-top: 32px;
+  fill: var(--main-text-color);
 }
 
 .contact-links a {
@@ -98,11 +99,11 @@ nav {
 
 .contact-link-icon {
   margin-right: 10px;
-  fill: var(--main-text-color);
 }
 
-.contact-link-icon:hover,
-.contact-link-icon::selection {
+.link-with-icon:hover,
+.link-with-icon:active,
+.link-with-icon:focus {
   fill: var(--main-link-color);
 }
 
@@ -259,28 +260,23 @@ h1 {
   justify-content: center;
   gap: 10px;
   padding-top: 16px;
-}
-
-.team-media-icon {
   fill: var(--icon-color);
 }
 
-.team-media-icon:hover {
-  fill: var(--logo-color);
-}
-.team-media li {
+.team-media-button {
   width: 44px;
   height: 44px;
   padding: 12px;
   border-radius: 50%;
-  fill: var(--icon-color);
+  display: flex;
+  background: rgba(255, 255, 255, 0.1);
   margin-bottom: 30px;
 }
 
-.team-media li:hover,
-.team-media li:focus,
-.team-media li:active {
-  background-color: var(--main-link-color);
+.team-media-button:hover,
+.team-media-button:focus,
+.team-media-buttonactive {
+  background: var(--main-link-color);
   fill: var(--logo-color);
 }
 
@@ -457,12 +453,12 @@ li button:hover {
 
 .item-list {
   list-style: none;
-  line-height: 1.67;
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
   align-content: center;
   padding-top: 34px;
+  line-height: 1.67;
 }
 
 .item-list figcaption {
@@ -470,12 +466,10 @@ li button:hover {
   border-left: 1px solid #eee;
   border-right: 1px solid #eee;
   padding: 20px 24px;
-  margin-top: -10px;
 }
 
 .item {
   width: 370px;
-  height: 404px;
   background-color: var(--logo-color);
 }
 
@@ -484,7 +478,6 @@ li button:hover {
   font-weight: 700;
   color: var(--main-normal-text-color);
   text-align: left;
-  margin-bottom: 4px;
 }
 
 .item-type {
